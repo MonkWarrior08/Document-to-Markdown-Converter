@@ -13,7 +13,7 @@ class AI():
         prompt = self.create_prompt(text, file_type)
 
         response = self.client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages= [
                 {"role": "system", "content": "You are a document converter specialized in reformatting text into clean, well-structured markdown. Pay special attention to mathematical formulas (convert to LaTeX) and code blocks (format properly with language hints)."},
                 {"role": "user", "content": prompt}
@@ -31,7 +31,7 @@ class AI():
         2. Format all mathematical formulas and equations using LaTeX (enclosed in $ for inline and $$ for block)
         3. Properly format code blocks with appropriate language hints
         4. Preserve tables, lists, and other structured elements
-        5. Use appropriate markdown heading levels (# for main headings, ## for subheadings, etc.)
+        5. Use appropriate markdown heading levels (# for main headings, ## for subheadings, etc.) but don't provide ```markdown
         6. For content that appears to be diagrams or complex visualizations, add a [DIAGRAM] placeholder and describe it briefly
 
         Here's the document content:

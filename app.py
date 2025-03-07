@@ -29,13 +29,13 @@ def main():
             st.info("File parsed successfully. Converting to Markdown")
 
             processor = AI()
-            markdown_text = AI.convert_markdown(content, file_type)
+            markdown_text = processor.convert_markdown(content, file_type)
 
             st.session_state.markdown_result = markdown_text
             st.session_state.current_markdown = markdown_text
 
         except Exception as e:
-            st.error("error: {str(e)}")
+            st.error(f"error: {str(e)}")
 
     if st.session_state.markdown_result:
         col1, col2 = st.columns(2)
