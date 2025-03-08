@@ -10,7 +10,7 @@ st.set_page_config(
 
 def main():
     st.title("Mardown Converter")
-    st.markdown("Accept PDF, DOC and Jupyter Notebook -> proper latex and codeblock")
+    st.markdown("Accept PDF, DOC and Jupyter Notebook")
 
     upload = st.file_uploader("Open File", type=["pdf", "docx", "ipynb"])
 
