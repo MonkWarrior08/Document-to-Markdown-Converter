@@ -1,6 +1,7 @@
 # Document to Markdown Converter
+<img width="1750" alt="Screenshot 2025-03-08 at 2 03 54 PM" src="https://github.com/user-attachments/assets/cb292a1b-23f5-410e-bb82-5b86c1117a03" />
 
-A simple interface built with Python that allows you to upload documents (PDF, DOCX, IPYNB) and convert them to well-formatted Markdown. The application uses OpenAI to process and improve the formatting, with special attention to:
+A simple interface built with Streamlit that allows you to upload documents (PDF, DOCX, IPYNB) and convert them to well-formatted Markdown with the aid of OpenAI. The application uses OpenAI to process and improve the formatting, with special attention to:
 
 - Mathematical formulas (converted to LaTeX)
 - Code blocks (properly formatted)
