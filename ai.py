@@ -1,18 +1,18 @@
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+import openai
 
 load_dotenv()
 
 class AI():
     def __init__(self):
         api_key = os.getenv("OPENAI_API_KEY")
-        self.client = OpenAI(api_key=api_key)
+        openai.api_key = api_key
 
     def convert_markdown(self, text, file_type):
         prompt = self.create_prompt(text, file_type)
 
-        response = self.client.chat.completions.create(
+        response = openai.chat.completions.create(
             model="gpt-4o-mini",
             messages= [
                 {"role": "system", "content": "You are a document converter specialized in reformatting text into clean, well-structured markdown. Pay special attention to mathematical formulas (convert to LaTeX) and code blocks (format properly with language hints)."},
