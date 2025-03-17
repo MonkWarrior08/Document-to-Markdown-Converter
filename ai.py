@@ -28,7 +28,12 @@ class AI():
 
         Special instructions:
         1. Preserve the original structure as much as possible
-        2. Format all mathematical formulas and equations using LaTeX (enclosed in $ for inline and $$ for block)
+        2. Format all mathematical formulas and equations using LaTeX:
+           - Use single dollar signs ($) for inline math
+           - Use double dollar signs ($$) for block equations, with the delimiters on separate lines like:
+             $$
+             math equation here
+             $$
         3. Properly format code blocks with appropriate language hints
         4. Preserve tables, lists, and other structured elements
         5. Use appropriate markdown heading levels (# for main headings, ## for subheadings, etc.) but don't provide ```markdown
